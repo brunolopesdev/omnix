@@ -1,0 +1,26 @@
+.footerContainer {
+  width: 100%;
+  background: #101522;
+  height: 80px;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .footerLogo {
+      color: #fff;
+      justify-self: flex-start;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
