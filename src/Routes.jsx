@@ -12,6 +12,7 @@ function Routes() {
         <Route path="/" exact component={Home} />
         <Route path="/ofertas" exact component={Offers} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

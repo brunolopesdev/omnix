@@ -8,6 +8,7 @@ import DataContext from "../../context";
 
 export const PricingCard = () => {
   const { usersAdress, deleteAdress } = useContext(DataContext);
+
   const [data, setData] = useState(offersData);
   const [offers, setOffers] = useState();
 
@@ -17,7 +18,7 @@ export const PricingCard = () => {
 
   const renderAdress = (a, index) => {
     return (
-      <div key={a.ibge}>
+      <article key={a.ibge}>
         <h2>Visualizando ofertas para o endereço:</h2>
         <p>
           <span>CEP:</span> {a.cep}
@@ -34,7 +35,7 @@ export const PricingCard = () => {
         <p>
           <span>Estado:</span> {a.uf}
         </p>
-      </div>
+      </article>
     );
   };
 
@@ -70,7 +71,9 @@ export const PricingCard = () => {
 
   const ofertasRenderizadas = (
     <>
-      <div className="currentAdress">{usersAdress?.map(renderAdress)}</div>
+      <article className="currentAdress">
+        {usersAdress?.map(renderAdress)}
+      </article>
       <section className="cardContainer" id="offers">
         {offers?.map(renderOffers)}
 
@@ -86,9 +89,9 @@ export const PricingCard = () => {
       {usersAdress?.length > 0 ? (
         ofertasRenderizadas
       ) : (
-        <div className="noOffers">
+        <article className="noOffers">
           <h1>Nenhuma oferta disponível no momento...</h1>
-        </div>
+        </article>
       )}
     </>
   );

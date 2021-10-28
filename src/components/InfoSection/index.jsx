@@ -8,7 +8,7 @@ export const InfoSection = () => {
       <h1>Informe seu CEP para consultar as nossas ofertas!</h1>
       <article className="container">
         <div className="leftContent">
-          <img src={homeImage} alt="Pagamento" />
+          <img src={homeImage} alt="Imagem representando a Internet" />
         </div>
         <div className="rightContent">
           <FormComponent />
